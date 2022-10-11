@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221006 10:48:03.648" rpa="false" schemaversion="3">
+<suite id="s1" name="WebTesting" source="C:\CursoUdemy\RobotFramework\WebTesting">
+<suite id="s1-s1" name="Amazon Testes" source="C:\CursoUdemy\RobotFramework\WebTesting\amazon_testes.robot">
+<test id="s1-s1-t1" name="Caso de Teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="9">
+<kw name="Abrir o navegador" library="amazon_resources" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221006 10:48:03.991" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20221006 10:48:03.991" endtime="20221006 10:48:06.332"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221006 10:48:06.332" endtime="20221006 10:48:06.517"/>
+</kw>
+<status status="PASS" starttime="20221006 10:48:03.991" endtime="20221006 10:48:06.517"/>
+</kw>
+<kw name="Acessar a home page do site Amazon.com.br" library="amazon_resources">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221006 10:48:06.520" level="INFO">Opening url 'https://www.amazon.com.br'</msg>
+<status status="PASS" starttime="20221006 10:48:06.519" endtime="20221006 10:48:08.665"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=${MENU_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20221006 10:48:14.030" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221006 10:48:14.032" level="FAIL">Element '//a[@class='hmenu-item'][contains(.,'Eletrônicos, TV e Áudio')]' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20221006 10:48:08.665" endtime="20221006 10:48:14.037"/>
+</kw>
+<status status="FAIL" starttime="20221006 10:48:06.517" endtime="20221006 10:48:14.038"/>
+</kw>
+<doc>Esse teste verifica o menu eletrônicos do site da Amazon.com.br
+e verifica a categoria Computadores e Informática</doc>
+<tag>categorias</tag>
+<tag>menus</tag>
+<status status="FAIL" starttime="20221006 10:48:03.991" endtime="20221006 10:48:14.040">Element '//a[@class='hmenu-item'][contains(.,'Eletrônicos, TV e Áudio')]' not visible after 5 seconds.</status>
+</test>
+<doc>Essa suite testa o site da Amazon.com.br</doc>
+<status status="FAIL" starttime="20221006 10:48:03.677" endtime="20221006 10:48:14.042"/>
+</suite>
+<status status="FAIL" starttime="20221006 10:48:03.651" endtime="20221006 10:48:14.045"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">categorias</stat>
+<stat pass="0" fail="1" skip="0">menus</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="WebTesting">WebTesting</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Amazon Testes">WebTesting.Amazon Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
